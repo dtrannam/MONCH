@@ -9,8 +9,8 @@
 <body>
 
     <h1>Reviews</h1>
-    <!--Read-->
     <table>
+        <thead>
         <tr>
             <th></th>
             <th></th>
@@ -21,9 +21,10 @@
             <th>restaurantID</th>
             <th>reviewStar</th>
         </tr>
+        </thead>
+        <tbody>
         <tr>
-            <td><button>Edit</button></td>
-            <td><button>Delete</button></td>
+            <td><button>Edit</button>></td>
             <td>1</td>
             <td>richie@lam.com</td>
             <td>1/1/2012</td>
@@ -57,9 +58,10 @@
     <button>Create Review</button>
 
     <!--Create-->
+
     <div id="createReviewDiv">
-        <h2>Create Review:</h2>
         <form id="createReviewForm" action="" method="post">
+        <h2>Create Review:</h2>
             <label for = "review"> Enter Review:</label>
             <input type="text" name="review" id="review">
             <label for = "restaurant"> Choose Restaurant:</label>
@@ -85,8 +87,9 @@
 
     <!--Update-->
     <div id="updateReviewDiv">
-        <h2>Update Review For selectedRestaurant:</h2>
+
         <form id="updateReviewForm" action="" method="post">
+            <h2>Update Review For selectedRestaurant:</h2>
             <label>Edit Review:</label>
             <input type="text" name="reviewEdit" value="Selected review goes here"> </input>
             <label for = "dateEdit"> Change Review Date:</label>
@@ -94,11 +97,11 @@
 
             <label for = "reviewStarEdit"> Change Stars</label>
             <select id="reviewStarEdit">
-                <<option value = "1"> 1 </option>
-                <<option value = "2"> 2 </option>
-                <<option value = "3"> 3 </option>
-                <<option value = "4"> 4 </option>
-                <<option value = "5"> 5 </option>
+                <option value = "1"> 1 </option>
+                <option value = "2"> 2 </option>
+                <option value = "3"> 3 </option>
+                <option value = "4"> 4 </option>
+                <option value = "5"> 5 </option>
 
             </select>
             <button type="submit" value="Submit">Edit Review</button>
