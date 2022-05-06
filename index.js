@@ -11,24 +11,33 @@ var morgan = require('morgan')
 app.use(morgan(':method :url :status'))
 
 // Static files
+
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, 'public/html_pages/home.html'));
+});
+
+app.get('/home', function(req, res) {
+  res.sendFile(path.join(__dirname, 'public/html_pages/home.html'));
+});
+
 app.get('/users', function(req, res) {
-  res.sendFile(path.join(__dirname, 'html_pages/users.html'));
+  res.sendFile(path.join(__dirname, 'public/html_pages/users.html'));
 });
 
 app.get('/reviews', function(req, res) {
-  res.sendFile(path.join(__dirname, 'html_pages/reviews.html'));
+  res.sendFile(path.join(__dirname, 'public/html_pages/reviews.html'));
 });
 
 app.get('/restaurants', function(req, res) {
-  res.sendFile(path.join(__dirname, 'html_pages/restaurants.html'));
+  res.sendFile(path.join(__dirname, 'public/html_pages/restaurants.html'));
 });
 
 app.get('/categories', function(req, res) {
-  res.sendFile(path.join(__dirname, 'html_pages/categories.html'));
+  res.sendFile(path.join(__dirname, 'public/html_pages/categories.html'));
 });
 
 app.get('/categories_restaurant', function(req, res) {
-  res.sendFile(path.join(__dirname, 'html_pages/categories_restaurant.html'));
+  res.sendFile(path.join(__dirname, 'public/html_pages/categories_restaurant.html'));
 });
 
 
