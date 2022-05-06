@@ -28,7 +28,9 @@ Insert INTO Restaurants (restaurantName, restaurantAddress, restaurantCity, rest
 VALUES (:restaurantName, :restaurantAddress, :restaurantCity, :restaurantPriceRange, :restaurantHasNutritionInfo)
 
 -- Restaurants_has_Categories
-Select * from Restaurants_has_Categories;
+Select restaurantName, categoryName from Restaurants_has_Categories
+INNER JOIN Restaurants ON Restaurants = Restaurants_has_Categories.Restaurants_restaurantID 
+INNER JOIN Categories ON Restaurants_has_Categories.categoryID = Categories.categoryID;
 
 Insert INTO Restaurants_has_Categories (Restaurants_restaurantID, Categories_categoryID)
 VALUES (:Restaurants_restaurantID, Categories_categoryID)
