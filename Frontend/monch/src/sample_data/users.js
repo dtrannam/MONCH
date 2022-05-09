@@ -12,3 +12,4 @@ export const sample_users = [
     userBirthday: "9/4/1994",
     userLocation: "Las Vegas"},    
 ]
+
