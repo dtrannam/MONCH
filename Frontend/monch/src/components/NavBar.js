@@ -8,7 +8,7 @@ function Navbar() {
             <br />
             <Link to="/reviews">Reviews</Link>
             <br />
-            <Link to="/resturants">Resturant</Link>
+            <Link to="/restaurant">Resturant</Link>
         </nav>
     )
 };

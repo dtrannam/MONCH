@@ -10,11 +10,16 @@ import Navbar from "../components/NavBar";
   4. Create form for insert X
   5. create form for delete -----
   6. create query for insert/delete ----- 
+
+  QUERIES NEEDED:
+  GET ALL USERS
+  DELETE A USER
+  UPDATE A USER
   */
 
 
 function Users() {
-  // State State Set Up
+  // State Set Up
   const [users, setUsers] = useState(sample_users)
 
   // Add SQL Query
@@ -53,7 +58,7 @@ function Users() {
 
   // Add SQL Delete
   function deleteUser(id) {
-    alert(`Deleting a User ${id}`)
+    alert(`Deleting Review ${id}`)
     const updatedUsers = [... users]
     updatedUsers.filter(user => user["userID"] !== id)
     console.log(updatedUsers)
@@ -80,13 +85,13 @@ function Users() {
       <button onClick={() => console.log(users)}>Click me for testing</button>
       <form onSubmit={createUser}>
         <h2>Create a new User</h2>
-        <label for="userEmail">Email:</label>
+        <label htmlFor="userEmail">Email:</label>
         <input type="email" id="userEmail" name="userEmail" onChange={e => onChangeEmail(e)}/>
         <br/>
-        <label for="userBirthday">Enter a birthday:</label>
+        <label htmlFor="userBirthday">Enter a birthday:</label>
         <input type="date" id="userBirthday" name="userBirthday" onChange={e => onChangeBirthday(e)}/>
         <br/>
-        <label for="userLocation">Enter a Location</label>
+        <label htmlFor="userLocation">Enter a Location</label>
         <input type="text" id="userLocation" name="userLocation" onChange={e => onChangeLocation(e)}/> 
         <br/>
         <input type="submit" value="Submit" />

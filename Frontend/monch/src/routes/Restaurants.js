@@ -1,6 +1,6 @@
 import Navbar from "../components/NavBar";
 
-function Resturant() {
+function Restaurants() {
     return (
         <div>
         <h1>Resturant</h1>
@@ -10,4 +10,4 @@ function Resturant() {
     );
 }
 
-export default Resturant
+export default Restaurants
