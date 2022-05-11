@@ -38,7 +38,8 @@ VALUES ('richie@lam.com', 0000-00-00, 'San Francisco'),
 CREATE TABLE Coupons
 (   `couponID`                  int(11) NOT NULL AUTO_INCREMENT,
     `coupondetails` 		    varchar(45) NOT NULL,
-)
+    PRIMARY KEY(couponID)
+);
 INSERT INTO Coupons (`coupondetails`)
 VALUES ("15% TOTAL ORDER"),
        ("FREE ADDONS WITH ORDER"),
@@ -88,16 +89,16 @@ VALUES (0000-00-00, 5, 'Wow, really good', 1, 1),
 
 ----------------------------------------------------------
 -- Table structure for table `Restaurants_has_Categories`
-CREATE TABLE Restaurant_with_Category
+CREATE TABLE restaurantsWithCategoriesID
 (   `restaurantsWithCategoriesID`   int(11) NOT NULL AUTO_INCREMENT,
     `restaurantID` 				    int(11) NOT NULL,
     `categoryID`    			    int(11) NOT NULL,
-    Primary Key (restaurantsHasCategoriesID),
+    Primary Key (restaurantsWithCategoriesID),
     FOREIGN KEY (restaurantID) REFERENCES Restaurants (restaurantID) ON DELETE CASCADE,
     FOREIGN KEY (categoryID) REFERENCES Categories (categoryID) ON DELETE CASCADE
 );
 -- Dumping data for table `Restaurants_has_Categories`
-INSERT INTO Restaurant_with_Category (`restaurantID`, `categoryID`)
+INSERT INTO restaurantsWithCategoriesID (`restaurantID`, `categoryID`)
 VALUES (1, 1),
        (1, 2),
        (3, 1),
