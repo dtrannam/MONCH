@@ -15,6 +15,8 @@ function NavBar() {
       <Link to="/categories">Categories</Link>
       <br />
       <Link to="/coupons">Coupons</Link>
+      <br />
+      <Link to="/categories_restaurants">Restaurant-Category Intersection</Link>
     </nav>
   );
 }
