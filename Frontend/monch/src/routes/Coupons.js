@@ -23,7 +23,7 @@ function Coupons() {
                 </tr>
                 <tr>
                     {coupons.map((coupon) => {
-                        return <CouponRow data={coupon} deleteCategories={deleteCoupon}/>
+                        return <CouponRow data={coupon} deleteCoupons={deleteCoupon}/>
                     })}
 
                 </tr>
