@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00590b05-ab32-4f62-bce4-ebe99ac42983" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Frontend/monch/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/monch/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/monch/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/monch/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/monch/src/routes/CategoryRestaurantIntersections.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

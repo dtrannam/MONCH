@@ -17,7 +17,7 @@ root.render(
       <Route path="/reviews" element={<Reviews />} />
       <Route path="/restaurants" element={<Restaurants />} />
       <Route path="/categories" element={<Categories />} />
-      {/*<Route path="/categories_restaurants" element={<Categories_restaurants />} />*/}
+      <Route path="/categories_restaurants" element={<Intersection />} />
       <Route path="/coupons" element={<Coupons />} />
     </Routes>
   </BrowserRouter>
