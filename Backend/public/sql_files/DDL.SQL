@@ -7,7 +7,7 @@ DROP TABLE Restaurants_has_Categories;
 
 CREATE TABLE Categories
 (   
-    `categoryID`   int(11) NOT NULL AUTO_INCREMENT,
+    `categoryID`   int NOT NULL AUTO_INCREMENT,
     `categoryName` varchar(255) DEFAULT NULL,
     PRIMARY KEY (categoryID)
 
@@ -22,7 +22,7 @@ VALUES (1, 'American'),
 -- Table structure for table `Users`
 CREATE TABLE Users
 (
-    `userID`       int(11) NOT NULL AUTO_INCREMENT,
+    `userID`       int NOT NULL AUTO_INCREMENT,
     `userEmail`    varchar(45) NOT NULL,
     `userBirthday` date        NOT NULL,
     `userLocation` varchar(45) NOT NULL,
@@ -34,16 +34,30 @@ VALUES ('richie@lam.com', 0000-00-00, 'San Francisco'),
        ('nathan@perkins.com', 0000-00-00, 'San Francisco'),
        ('kevin@luk.com', 0000-00-00, 'Las Vegas');
 ----------------------------------------------------------
+-- Table structure for table `Coupon`
+CREATE TABLE Coupons
+(   `couponID`                  int(11) NOT NULL AUTO_INCREMENT,
+    `coupondetails` 		    varchar(45) NOT NULL,
+    PRIMARY KEY(couponID)
+);
+INSERT INTO Coupons (`coupondetails`)
+VALUES ("15% TOTAL ORDER"),
+       ("FREE ADDONS WITH ORDER"),
+       ("BUY ONE GET ONE FREE");
+----------------------------------------------------------
 -- Table structure for table `Restaurants`
 CREATE TABLE Restaurants
 (
-    `restaurantID`               int(11) NOT NULL AUTO_INCREMENT,
+    `restaurantID`               int NOT NULL AUTO_INCREMENT,
     `restaurantName`             varchar(45) NOT NULL,
     `restaurantAddress`          varchar(45) NOT NULL,
     `restaurantCity`             varchar(45) NOT NULL,
-    `restaurantPriceRange`       int(11) NOT NULL,
-    `restaurantHasNutritionInfo` tinyint(4) DEFAULT NULL,
-    PRIMARY KEY (restaurantID)
+    `restaurantPriceRange`       int NOT NULL,
+    `restaurantHasNutritionInfo` boolean DEFAULT FALSE,
+    `couponID`                   int DEFAULT NULL,
+    PRIMARY KEY (restaurantID),
+    FOREIGN KEY (couponID) REFERENCES Coupons (couponID)
+
 );
 -- Dumping data for table `Restaurants`
 INSERT INTO Restaurants (`restaurantName`, `restaurantAddress`, `restaurantCity`,
@@ -55,12 +69,12 @@ VALUES ('Hugos Cellar', '202 Fremont Street Experience', 'Las Vegas', 3, 0),
 -- Table structure for table `Reviews`
 CREATE TABLE Reviews
 (
-    `reviewID`                  int(11) NOT NULL AUTO_INCREMENT,
-    `reviewDate`                date     NOT NULL,
-    `reviewStar`                int(11) NOT NULL,
-    `reviewContent`             longtext NOT NULL,
-    `userID`                   int(11) NOT NULL,
-    `restaurantID`             int(11) NOT NULL,
+    `reviewID`                 int NOT NULL AUTO_INCREMENT,
+    `reviewDate`               date     NOT NULL,
+    `reviewStar`               int NOT NULL,
+    `reviewContent`            longtext NOT NULL,
+    `userID`                   int NOT NULL,
+    `restaurantID`             int NOT NULL,
     PRIMARY KEY (reviewID, userID, restaurantID),
 	FOREIGN KEY (restaurantID) REFERENCES Restaurants(restaurantID) ON DELETE CASCADE,
 	FOREIGN KEY (userID) REFERENCES Users(userID) ON DELETE CASCADE
@@ -75,16 +89,16 @@ VALUES (0000-00-00, 5, 'Wow, really good', 1, 1),
 
 ----------------------------------------------------------
 -- Table structure for table `Restaurants_has_Categories`
-CREATE TABLE Restaurants_has_Categories
-(   `restaurantsHasCategoriesID` int(11) NOT NULL AUTO_INCREMENT,
-    `restaurantID` 				int(11) NOT NULL,
-    `categoryID`    			int(11) NOT NULL,
-    Primary Key (restaurantsHasCategoriesID),
+CREATE TABLE restaurantsWithCategoriesID
+(   `restaurantsWithCategoriesID`   int(11) NOT NULL AUTO_INCREMENT,
+    `restaurantID` 				    int(11) NOT NULL,
+    `categoryID`    			    int(11) NOT NULL,
+    Primary Key (restaurantsWithCategoriesID),
     FOREIGN KEY (restaurantID) REFERENCES Restaurants (restaurantID) ON DELETE CASCADE,
     FOREIGN KEY (categoryID) REFERENCES Categories (categoryID) ON DELETE CASCADE
 );
 -- Dumping data for table `Restaurants_has_Categories`
-INSERT INTO Restaurants_has_Categories (`restaurantID`, `categoryID`)
+INSERT INTO restaurantsWithCategoriesID (`restaurantID`, `categoryID`)
 VALUES (1, 1),
        (1, 2),
        (3, 1),
