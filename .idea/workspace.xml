@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00590b05-ab32-4f62-bce4-ebe99ac42983" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Backend/public/html_pages/coupons.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/monch/src/components/CategoryRow.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/monch/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/monch/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/monch/src/components/CouponSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/monch/src/components/CouponSelect.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/monch/src/components/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/monch/src/components/NavBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/monch/src/components/RestaurantRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/monch/src/components/RestaurantRow.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/monch/src/components/RestaurantSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/monch/src/components/RestaurantSelect.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/monch/src/components/ReviewRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/monch/src/components/ReviewRow.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/monch/src/components/UserRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/monch/src/components/UserRow.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/monch/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/monch/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/monch/src/routes/Restaurants.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/monch/src/routes/Restaurants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/monch/src/routes/Reviews.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/monch/src/routes/Reviews.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/monch/src/routes/Users.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/monch/src/routes/Users.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +94,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/Frontend/monch/src/components/RestaurantRow.jsx</url>
           <line>3</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
