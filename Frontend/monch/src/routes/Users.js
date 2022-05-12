@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { sample_users } from "../sample_data/users"
 import UserRow from "../components/UserRow"
-import Navbar from "../components/NavBar";
+import NavBar from "../components/NavBar";
 
   /* 
   1. Create Sample Data X
@@ -67,7 +67,7 @@ function Users() {
   return (
     <div>
       <h1>User</h1>
-      <Navbar></Navbar>
+      <NavBar></NavBar>
       <h2>User Table</h2>
       <tbody>
         <table>

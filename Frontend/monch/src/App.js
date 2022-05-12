@@ -1,6 +1,6 @@
 import React from 'react';
 import {Outlet} from 'react-router-dom';
-import Navbar from './components/NavBar';
+import NavBar from './components/NavBar';
   /* 
   1. Create Sample Data X
   2. Create Table X
@@ -15,7 +15,7 @@ function App() {
   return (
     <div>
       <h1>MONCH</h1>
-          <Navbar/>
+          <NavBar/>
       <p>This is the home page</p>
     </div>
   );

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Navbar from "../components/NavBar";
+import NavBar from "../components/NavBar";
 import { sample_restaurants } from "../sample_data/restaurants"
 import { sample_coupons } from "../sample_data/coupons"
 import RestaurantRow from "../components/RestaurantRow"
@@ -27,7 +27,7 @@ function Restaurants() {
     return (
         <div>
         <h1>Restaurant</h1>
-        <Navbar></Navbar>
+        <NavBar/>
         <h2>Restaurant Table</h2>
         <table>
             <tr>

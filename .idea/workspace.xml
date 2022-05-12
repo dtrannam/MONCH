@@ -2,11 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00590b05-ab32-4f62-bce4-ebe99ac42983" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/public/SQL DMQ/categories.sql" beforeDir="false" afterPath="$PROJECT_DIR$/public/SQL DMQ/DMQ_OF_ALL_PAGES.SQL" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/SQL DMQ/categories_restaurant.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/SQL DMQ/restaurants.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/SQL DMQ/reviews.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/SQL DMQ/users.sql" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/public/html_pages/coupons.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/monch/src/components/CategoryRow.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/monch/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/monch/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/monch/src/components/CouponSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/monch/src/components/CouponSelect.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/monch/src/components/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/monch/src/components/NavBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/monch/src/components/RestaurantRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/monch/src/components/RestaurantRow.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/monch/src/components/RestaurantSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/monch/src/components/RestaurantSelect.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/monch/src/components/ReviewRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/monch/src/components/ReviewRow.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/monch/src/components/UserRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/monch/src/components/UserRow.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/monch/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/monch/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/monch/src/routes/Restaurants.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/monch/src/routes/Restaurants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/monch/src/routes/Reviews.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/monch/src/routes/Reviews.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/monch/src/routes/Users.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/monch/src/routes/Users.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +26,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -41,6 +52,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -48,7 +60,8 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -69,6 +82,7 @@
       <updated>1651736820243</updated>
       <workItem from="1651736821875" duration="11431000" />
       <workItem from="1651789071963" duration="1304000" />
+      <workItem from="1652339610599" duration="6729000" />
     </task>
     <servers />
   </component>
@@ -85,6 +99,18 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/Frontend/monch/src/components/RestaurantRow.jsx</url>
+          <line>3</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

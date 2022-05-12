@@ -1,3 +1,4 @@
+// We should consider making the delete, update and insest buttons their own components
 function RestaurantRow( props ) {
     return (
         <tr id={props.data.restaurantID}>
@@ -8,9 +9,9 @@ function RestaurantRow( props ) {
             <td>{props.data.restaurantPriceRange}</td>
             <td>{props.data.restaurantHasNutritionInfo}</td>
             <td>{props.data.restaurantDeals}</td>
-            <td><button onClick={() => props.deleteReview(props.data.reviewID)}>Delete</button></td>
+            <td><button onClick={() => props.deleteRestaurants(props.data.restaurantID)}>Delete</button></td>
         </tr>
     );
-};
+}
 
 export default RestaurantRow;

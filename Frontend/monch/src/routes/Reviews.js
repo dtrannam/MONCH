@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { sample_users } from "../sample_data/users"
 import ReviewRow from "../components/ReviewRow"
-import Navbar from "../components/NavBar";
+import NavBar from "../components/NavBar";
 import { sample_reviews } from '../sample_data/reviews';
 
   /* 
@@ -90,7 +90,7 @@ function Reviews() {
     return (
         <div>
         <h1>Reviews</h1>
-        <Navbar></Navbar>
+        <NavBar></NavBar>
         <h2>Review Table</h2>
         <form onSubmit={searchReview}>
             <label htmlFor="search">Search for a Restaurant: </label>
