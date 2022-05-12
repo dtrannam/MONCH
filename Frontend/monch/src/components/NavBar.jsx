@@ -10,6 +10,7 @@ function NavBar() {
             <br />
             <Link to="/restaurants">Restaurants</Link>
             <Link to="/categories">Categories</Link>
+            <Link to="/coupons">Coupons</Link>
         </nav>
     )
 };
