@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/MONCH/index.html/static/js/main.347ec3db.js",
-    "index.html": "/MONCH/index.html/index.html",
-    "main.347ec3db.js.map": "/MONCH/index.html/static/js/main.347ec3db.js.map"
+    "main.js": "/MONCH/static/js/main.347ec3db.js",
+    "index.html": "/MONCH/index.html",
+    "main.347ec3db.js.map": "/MONCH/static/js/main.347ec3db.js.map"
   },
   "entrypoints": [
     "static/js/main.347ec3db.js"
