@@ -14,7 +14,7 @@ import Navbar from "../components/NavBar";
   QUERIES NEEDED:
   GET ALL USERS
   DELETE A USER
-  UPDATE A USER
+  ADD A USER
   */
 
 
@@ -46,7 +46,7 @@ function Users() {
   function createUser(event) {
     event.preventDefault()
     let newUser = {
-      userID: "None", 
+      userID: "SQLHERE", 
       userEmail: email, 
       userBirthday: birthday,
       userLocation: location
@@ -66,8 +66,9 @@ function Users() {
 
   return (
     <div>
-      <h1>User Table</h1>
+      <h1>User</h1>
       <Navbar></Navbar>
+      <h2>User Table</h2>
       <tbody>
         <table>
           <tr>
@@ -82,7 +83,6 @@ function Users() {
           })}
         </table>
       </tbody>
-      <button onClick={() => console.log(users)}>Click me for testing</button>
       <form onSubmit={createUser}>
         <h2>Create a new User</h2>
         <label htmlFor="userEmail">Email:</label>

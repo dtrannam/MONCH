@@ -14,20 +14,60 @@ import { sample_reviews } from '../sample_data/reviews';
   7. search review x 
 
   QUERIES NEEDED:
-  SELECT ALL REVIEWS - DO AN INNER JOIN FOR USERS/STORIES
-  SELECT ALL USERS
-  SELECT ALL STORES
-  DELETE A REVIEW
-  SELECT A RESTURANT REVIEW
+  SELECT ALL REVIEWS - DO AN INNER JOIN FOR USERS EMAIL
+  SELECT ALL USERS -  NEEDED FOR CREATE A REVIEW
+  SELECT ALL RESTAURANT - NEEDED FOR CREATE A REVIEW
+  DELETE A REVIEW 
+  SELECT A RESTURANT REVIEW - INNER JOIN FOR SEARCH
   */
 
 function Reviews() {
     // State Set Up
     const [reviews, setReviews] = useState(sample_reviews)
-    const [search, setSearch] = useState("")
+    
     // Add SQL Query 
-
     // Form Set Up
+    const [userID, setuserID] = useState("")
+    const [restaurantID, setRestaurantID] = useState("")
+    const [reviewContent, setReviewContent] = useState("")
+    const [reviewDate, setReviewDate] = useState("")
+    const [reviewStar, setReviewStar] = useState(1)
+
+    function createReview(event) {
+        event.preventDefault()
+        const newReview = {
+            reviewID: "SQLHERE",
+            userEmail: "SQLHERE",
+            restaurantName: "SQLHERE",
+            reviewContent: reviewContent,
+            reviewStar: reviewStar, 
+            reviewDate: reviewDate, 
+        }
+        const updatedReview = [... reviews]
+        updatedReview.push(newReview)
+        setReviews(updatedReview)
+    }
+
+    function onChangeUserID(event) {
+        setuserID(event.target.value)
+    }
+
+    function onChangeRestaurantID(event) {
+        setRestaurantID(event.target.value)
+    }
+
+    function onChangeReviewContent(event) {
+        setReviewContent(event.target.value)
+    }
+
+    function onChangeDate(event) {
+        setReviewDate(event.target.value)
+    }
+
+    function onChangeReviewStar(event) {
+        setReviewStar(event.target.value)
+    }
+
 
     // Add SQL Delete
     function deleteReview(id) {
@@ -35,14 +75,14 @@ function Reviews() {
     }
 
     // Search SQL
+    const [search, setSearch] = useState("")
     function searchReview(event) {
         event.preventDefault()
-
+        alert(`Searching for term: ${search}`)
     }
 
     function onChangeSearch(event) {
         setSearch(event.target.value)
-        console.log(search)
     }
 
 
@@ -51,7 +91,7 @@ function Reviews() {
         <div>
         <h1>Reviews</h1>
         <Navbar></Navbar>
-        <h1>Review Table</h1>
+        <h2>Review Table</h2>
         <form onSubmit={searchReview}>
             <label htmlFor="search">Search for a Restaurant: </label>
             <input type="text" id="search" onChange={e => onChangeSearch(e)}/>
@@ -74,10 +114,10 @@ function Reviews() {
             </table>
         </tbody>
         <br/>
-        <form>
+        <form onSubmit={createReview}>
             <h2>Create a Review</h2>
             <label htmlFor="userEmail">User Email</label>
-                <select id="userEmail" name="userEmail">
+                <select id="userEmail" name="userEmail" onChange={onChangeUserID}>
                 <option value="3">kevin@luk.com</option>
                 <option value="2">nathan@perkins.com</option>
                 <option value="1">richie@lam.com</option>
@@ -85,7 +125,7 @@ function Reviews() {
             <br/>
             <br/>
             <label htmlFor="restaurantName">Restaurant Name</label>
-                <select id="restaurantName" name="restaurantName">
+                <select id="restaurantName" name="restaurantName" onChange={onChangeRestaurantID}>
                 <option value="3">Hugos Cellar</option>
                 <option value="2">Cheesecake Factory</option>
                 <option value="1">Jjanga AYCE Sushi</option>
@@ -94,10 +134,10 @@ function Reviews() {
             <br/>
             <label htmlFor="reviewContent">Review Content</label>
             <br/>
-            <textarea id="reviewContent" name="reviewContent" rows="10" cols="50"/>
+            <textarea id="reviewContent" name="reviewContent" rows="10" cols="50" onChange={onChangeReviewContent} required/>
             <br/>
             <label htmlFor="reviewStar">reviewStar</label>
-                <select id="reviewStar" name="reviewStar">
+                <select id="reviewStar" name="reviewStar" onChange={onChangeReviewStar} required>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -106,7 +146,7 @@ function Reviews() {
                 </select>
             <br/>
             <label htmlFor="date">Date of Visit</label>
-            <input type="date" name="date" id="date" />
+            <input type="date" name="date" id="date" onChange={onChangeDate} required/>
             <br/>
             <button>Submit</button>
         </form>
